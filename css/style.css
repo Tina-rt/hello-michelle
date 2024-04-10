@@ -19,21 +19,23 @@ body {
 
 nav {
   width: 100%;
+  height: 70px;
   max-width: 100%;
   position: fixed;
   display: flex;
+  align-items: center;
   z-index: 999;
   background-color: var(--blanc);
-  padding: 10px;
+  padding: 0 10px;
 }
 
 nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3rem;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 .nav-link {
@@ -42,7 +44,17 @@ nav ul {
   color: var(--rose);
   cursor: pointer;
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+  height: 100%;
+  transition: all 0.5s;
 }
+
+.nav-link:hover {
+  background-color: var(--third);
+}
+
 .nav-link a {
   text-decoration: none;
   color: var(--rose);
@@ -227,7 +239,7 @@ nav ul {
   top: 0;
   left: 0;
   width: 200px;
-  height: 90vh;
+  height: 80vh;
   background-color: var(--secondary);
 }
 
@@ -239,4 +251,55 @@ nav ul {
   width: 350px;
   height: 50vh;
   background-color: var(--third);
+}
+
+.bg-third {
+  background-color: var(--third);
+}
+
+.article-team {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card-team {
+  width: 300px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  text-transform: uppercase;
+  background-color: var(--third);
+}
+.card-team .card-img-team {
+  width: 100%;
+}
+.card-img-team img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card-team-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card-team-name {
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card-team-position {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
 }

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="lineicons.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -112,7 +113,7 @@
         </article>
       </div>
     </div>
-    <div class="d-section">
+    <div class="d-section" id="about">
       <h2 class="section-title">Qui sommes nous ?</h2>
       <article class="article-who">
         <div class="image_aside">
@@ -194,11 +195,49 @@
           <div class="card-team-desc">
             <div class="card-team-name">Fandresena</div>
             <div class="card-team-position">
-              <span>Reporting</span>
-              <span>Support</span>
+              <span>Reporting & support</span>
+              <span>Supervision</span>
           </div>
         </div>
       </article>
+    </div>
+    <div class="d-section" id="contact">
+        <h2 class="section-title">Nous contacter</h2>
+        <article class="article-contact">
+            <div class="adresse-info">
+                <div class="detail-adresse">
+                    <div class="logo">
+                        <img src="img/hello_Michelle_logo.png" alt="">
+                    </div>
+                    <span><i class="lni lni-phone"></i><strong>+261 33 37 493 68</strong></span>
+                    <span><i class="lni lni-map-marker"></i><strong>Antananarivo, Madagascar</strong></span>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241599.2430118235!2d47.3477012642339!3d-18.88760589738861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07de34f1f4eb3%3A0xdf110608bcc082f9!2sTananarive!5e0!3m2!1sfr!2smg!4v1712778130141!5m2!1sfr!2smg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <form action="">
+                <div>
+                    <h3>Formulaire de contact</h3>
+                <p>Vous pouvez nous contacter en remplissant ce formulaire</p>
+                </div>
+                <div class="parent-form-group">
+                    <div class="form-group">
+                    <label for="nom">Nom *</label>
+                        <input type="text" name="nom" id="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea name="Message" id="Message" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                
+            </form>
+        </article>
     </div>
   </body>
 </html>

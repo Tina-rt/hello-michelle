@@ -119,9 +119,11 @@ nav ul {
 
 .d-section {
   width: auto;
-  height: 100vh;
+  height: auto;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
   gap: 3rem;
   align-items: center;
   justify-content: center;
@@ -215,7 +217,7 @@ nav ul {
   width: 50%;
   line-height: 30px;
   word-spacing: 8px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .article-content p {
@@ -260,6 +262,7 @@ nav ul {
 .article-team {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -302,4 +305,62 @@ nav ul {
   gap: 0.6rem;
   font-size: 1.2rem;
   padding-bottom: 10px;
+}
+
+.article-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.article-contact form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+.article-contact h3 {
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
+}
+.parent-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group input {
+  height: 30px;
+  width: 100%;
+  border: 1px solid var(--secondary);
+  padding: 5px;
+}
+
+textarea {
+  padding: 10px;
+}
+
+.adresse-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.adresse-info .detail-adresse {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-adresse span {
+  display: flex;
+  gap: 5px;
 }

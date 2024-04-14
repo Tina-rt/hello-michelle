@@ -2,14 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="VwLKTjouOrccpn8B4LRy2RXGYEyzF_4C1Ah-k8rm4WI" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="lineicons.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="lineicons.css" /> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <title>Hello Michelle</title>
@@ -25,11 +36,19 @@
             alt="Hello Michelle Logo"
           />
         </li>
-        <li class="nav-link"><a href="#">Accueil</a></li>
-        <li class="nav-link"><a href="#services">Nos services</a></li>
-        <li class="nav-link"><a href="#">Contact</a></li>
+        <li class="nav-link">
+          <a href="#"><i class="fa fa-home"></i> Accueil</a>
+        </li>
+        <li class="nav-link">
+          <a href="#services"><i class="fa fa-tag"></i>Nos services</a>
+        </li>
+        <li class="nav-link">
+          <a href="#demander_devis"
+            ><i class="fa fa-ruler"></i>Demander un devis</a
+          >
+        </li>
       </ul>
-      <div class="btn-primary">Demander un devis</div>
+      <div class="btn-primary" id="btn-modal">Parlons-en</div>
     </nav>
 
     <section class="banniere">
@@ -39,20 +58,30 @@
       <div class="paragraph">
         <div class="paragraph-container">
           <h1>
-            Bienvenu <br />
+            Bienvenue <br />
             chez <br />
             Hello Michelle
           </h1>
           <p>
             Choisissez le meilleur partenaire pour l'externalisation de vos
-            services. *Avec un tarif très abordable*
+            services.
           </p>
+          <p>
+            <strong> Avec un tarif très abordable </strong>
+          </p>
+
+          <div class="btn-secondary">
+            <span>Découvrir</span>
+            <i class="fa fa-arrow-right"></i>
+          </div>
         </div>
       </div>
     </section>
+<?php include("modal.php") ?>
+    
     <div class="d-section" id="services">
       <h2 class="section-title">Nos services</h2>
-      <div class="list-article">
+      <div class="list-article" data-aos="fade-up" data-aos-duration="4000">
         <article class="card">
           <div class="card-image">
             <img src="img/Service client SAV.jpg" alt="Services client" />
@@ -113,6 +142,19 @@
             </ul>
           </div>
         </article>
+        <article class="card">
+          <div class="card-image">
+            <img src="img/Developpement WEB.jpg" alt="Developpement web" />
+          </div>
+          <div class="card-content">
+            <i class="lni lni-code-alt"></i>
+            <h3>Développement web</h3>
+            <ul>
+              <li>Création de SiteWeb</li>
+              <li>Developpement d'application web</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </div>
     <div class="d-section" id="about">
@@ -120,11 +162,15 @@
       <article class="article-who">
         <div class="image_aside">
           <img class="logo" src="img/hello_Michelle_logo.png" alt="" />
-          <div class="rec1"></div>
-          <div class="rec2"></div>
+          <div class="rec1" data-aos="fade-up" data-aos-duration="8000"></div>
+          <div class="rec2" data-aos="fade-up" data-aos-duration="6000"></div>
         </div>
-        <div class="article-content">
-          <p>
+        <div
+          class="article-content"
+          data-aos="fade-up-left"
+          data-aos-duration="100"
+        >
+          <p data-aos="fade-left" data-aos-duration="1000">
             <strong>Hello Michelle</strong> est une entreprise basée à
             Tananarive, Madagascar, spécialisée dans le traitement des services
             externalisés. Depuis notre création en janvier 2023, nous avons
@@ -132,7 +178,7 @@
             virtuel, de Community management, de service client et de back
             office de qualité supérieure à des prix compétitifs.
           </p>
-          <p>
+          <p data-aos="fade-left" data-aos-duration="1300">
             Notre mission est simple : aider les moyennes entreprises
             francophones à se développer en choisissant notre expertise. Chez
             <strong>Hello Michelle</strong>, nous croyons fermement que la
@@ -140,17 +186,17 @@
             nous nous engageons à fournir des services de premier ordre à des
             tarifs abordables.
           </p>
-          <p>
+          <p data-aos="fade-left" data-aos-duration="1400">
             Nous sommes impatients de collaborer avec vous pour transformer
             votre entreprise et contribuer à votre succès.
           </p>
         </div>
       </article>
     </div>
-    <div class="d-section">
+    <div class="d-section" data-aos="fade-up" data-aos-duration="1000">
       <h2 class="section-title">Notre équipe</h2>
       <article class="article-team">
-        <div class="card-team">
+        <div class="card-team" data-aos="fade-up" data-aos-duration="1000">
           <div class="card-img-team">
             <img src="img/Capture-removebg-preview.png" alt="" />
           </div>
@@ -164,7 +210,7 @@
             </div>
           </div>
         </div>
-        <div class="card-team">
+        <div class="card-team" data-aos="fade-up" data-aos-duration="1400">
           <div class="card-img-team">
             <img src="img/Hoby-removebg-preview.png" alt="" />
           </div>
@@ -177,7 +223,7 @@
             </div>
           </div>
         </div>
-        <div class="card-team">
+        <div class="card-team" data-aos="fade-up" data-aos-duration="1500">
           <div class="card-img-team">
             <img src="img/anicet.jpg" alt="" />
           </div>
@@ -190,7 +236,7 @@
             </div>
           </div>
         </div>
-        <div class="card-team">
+        <div class="card-team" data-aos="fade-up" data-aos-duration="1400">
           <div class="card-img-team">
             <img src="img/fandresena.png" alt="" />
           </div>
@@ -204,8 +250,8 @@
         </div>
       </article>
     </div>
-    <div class="d-section" id="contact">
-      <h2 class="section-title">Nous contacter</h2>
+    <div class="d-section" id="demander_devis">
+      <h2 class="section-title">Demander un devis</h2>
       <article class="article-contact">
         <div class="adresse-info">
           <div class="detail-adresse">
@@ -225,7 +271,7 @@
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241599.2430118235!2d47.3477012642339!3d-18.88760589738861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07de34f1f4eb3%3A0xdf110608bcc082f9!2sTananarive!5e0!3m2!1sfr!2smg!4v1712778130141!5m2!1sfr!2smg"
-            width="600"
+            width="auto"
             height="450"
             style="border: 0"
             allowfullscreen=""
@@ -235,8 +281,7 @@
         </div>
         <form action="">
           <div>
-            <h3>Formulaire de contact</h3>
-            <p>Vous pouvez nous contacter en remplissant ce formulaire</p>
+            <p>Nous vous répondrons sous un délai de 24 à 48h</p>
           </div>
           <div class="parent-form-group">
             <div class="form-group">
@@ -262,11 +307,17 @@
       </article>
     </div>
     <footer>
+      <div class="legal">
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Mention légale</a>
+      </div>
+      <div class="cpright">©Copyright 2024 | Hello Michelle</div>
       <div class="logo">
         <img src="img/hello_Michelle_logo.png" alt="Hello Michelle logo" />
       </div>
     </footer>
   </body>
 </html>
+<script src="js/aos.js"></script>
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/index.js"></script>

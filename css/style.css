@@ -8,6 +8,13 @@
   --blanc: #fff;
   --btn-height: 40px;
 }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 html {
   scroll-behavior: smooth;
   max-width: 100%;
@@ -16,7 +23,8 @@ body {
   padding: 0;
   margin: 0;
   max-width: 100%;
-  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  font-family: "Urbanist", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
@@ -37,15 +45,11 @@ nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 10px;
+
   margin: 0;
   padding: 0;
   height: var(--btn-height);
-}
-
-nav li {
-  max-width: 200px;
-  min-width: 150px;
-  text-align: center;
 }
 
 .nav-link {
@@ -53,16 +57,30 @@ nav li {
   text-transform: uppercase;
   color: var(--rose);
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 16px;
   display: flex;
   align-items: center;
-  padding-inline: 20px;
   height: 100%;
+  width: 100%;
   transition: all 0.5s;
+  position: relative;
+  text-align: center;
 }
 
-.nav-link:hover {
-  background-color: var(--third);
+.nav-link::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--rose);
+  transform: scaleX(0);
+  transition: all 0.4s;
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
 }
 
 .nav-link a {
@@ -70,6 +88,10 @@ nav li {
   text-align: center;
   width: 100%;
   color: var(--rose);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
   transition: all 0.5s;
 }
 
@@ -78,9 +100,10 @@ nav li {
 }
 
 .nav-link .btn-primary {
+  font-size: 1.2vw;
 }
 nav .logo {
-  width: 200px;
+  min-width: 200px;
   height: auto;
   margin: 30px 10px;
   padding: 10px 20px;
@@ -123,7 +146,7 @@ nav .logo {
   height: 100vh;
   color: white;
   background-size: cover;
-  background-image: url("/img/028-producto_orig.jpg");
+  background-image: url("../img/028-producto_orig.webp");
   padding: 0 4rem;
 }
 .banniere .paragraph-container {
@@ -142,6 +165,24 @@ nav .logo {
   text-transform: uppercase;
 }
 
+.btn-secondary {
+  background-color: var(--blanc);
+  color: var(--rose);
+  font-size: 18px;
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-weight: bold;
+  min-width: 200px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn-secondary:hover {
+  background-color: var(--third);
+}
+
 .d-section {
   width: auto;
   height: auto;
@@ -152,7 +193,7 @@ nav .logo {
   gap: 3rem;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .section-title {
@@ -163,9 +204,9 @@ nav .logo {
 .list-article {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 90%;
   max-width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   /* padding: 20px; */
@@ -267,7 +308,7 @@ nav .logo {
   top: 0;
   left: 0;
   width: 200px;
-  height: 80vh;
+  height: 100%;
   background-color: var(--secondary);
 }
 
@@ -277,7 +318,7 @@ nav .logo {
   top: 20%;
   right: 0;
   width: 350px;
-  height: 50vh;
+  height: 50%;
   background-color: var(--third);
 }
 
@@ -336,6 +377,7 @@ nav .logo {
 .article-contact {
   display: flex;
   flex-direction: row;
+  width: 100%;
   gap: 3rem;
 }
 .article-contact form {
@@ -366,7 +408,8 @@ nav .logo {
   gap: 4px;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   height: 30px;
   width: 100%;
   border: 1px solid var(--secondary);
@@ -380,6 +423,7 @@ textarea {
 .adresse-info {
   display: flex;
   flex-direction: column;
+  width: 30%;
   gap: 1.4rem;
 }
 .adresse-info .detail-adresse {
@@ -387,6 +431,7 @@ textarea {
   flex-direction: row;
   gap: 2rem;
   align-items: center;
+  width: 100%;
 }
 
 .detail-adresse span {
@@ -395,11 +440,12 @@ textarea {
 }
 
 .detail-adresse .logo {
-  height: 60px;
+  height: auto;
+  width: 30%;
 }
 .detail-adresse .logo img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -412,17 +458,19 @@ textarea {
 
 .btn-primary {
   height: 40px;
+  width: 8rem;
   background-color: var(--rose);
   color: var(--blanc);
   border: none;
   cursor: pointer;
   transition: all 0.4s;
   font-size: 1.2em;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-inline: 10px;
+  padding: 0px 10px;
 }
 .btn-primary:hover {
   background-color: var(--rose-1);
@@ -433,8 +481,12 @@ footer {
   height: 30vh;
   background: var(--rose);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
+  gap: 1rem;
+  color: white;
 }
 
 footer .logo {
@@ -446,4 +498,20 @@ footer .logo img {
   height: 100%;
   object-fit: cover;
   filter: brightness(100);
+}
+
+footer .legal {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+footer .legal a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.4s;
+}
+
+footer .legal a:hover {
+  color: var(--noir);
 }
